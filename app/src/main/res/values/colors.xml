@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="default_rise_color">#43B677</color>
+    <color name="default_fall_color">#EE6D46</color>
+    
+    <color name="kline_bg_color">#131F30</color>
+    <color name="kline_bg_line_color">#1E2E42</color>
+    <color name="kline_activity_bg">#081724</color>
+    <color name="white">#FFFFFF</color>
+    <color name="u_4c617c">#4C617C</color>
+    <color name="u_5786d2">#5786D2</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="u_55000000">#55000000</color>
+    <color name="u_e0e0e0">#e0e0e0</color>
+    <color name="u_071724">#071724</color>
+    <color name="u_131e32">#131E32</color>
+    <color name="u_263741">#263741</color>
+    <color name="u_526d9a">#526D9A</color>
+    <color name="u_cdd4e7">#CDD4E7</color>
+    <color name="u_788ca7">#788CA7</color>
+
+</resources>

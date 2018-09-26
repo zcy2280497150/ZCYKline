@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ZCYKlineView">
+        <attr name="riseColor" format="color"/>
+        <attr name="fallColor" format="color"/>
+        <attr name="bgLineColor" format="color"/>
+        <attr name="exTopHeight" format="dimension"/>
+        <attr name="exBottomHeight" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="CusLoadingView">
+        <attr name="icon_image" format="reference"/>
+        <attr name="icon_width" format="dimension"/>
+        <attr name="round_bg_color" format="color"/>
+        <attr name="round_bg_width" format="dimension"/>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/u_071724"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:background="@color/u_131e32"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:text="ETH/USDT"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginStart="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+
+        <FrameLayout
+            android:id="@+id/title_right_layout"
+            android:layout_width="30dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@drawable/icon_narrow"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:background="@color/u_131e32"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <zcy.app.zcykline.customview.ZCYKlineView
+            android:id="@+id/kline_view"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:background="@drawable/shape_landscape_right_bg"
+            android:layout_margin="5dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_width="50dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textSize="12sp"
+                android:text="主图"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/u_526d9a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioGroup
+                android:id="@+id/radio_group1"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3">
+
+                <RadioButton
+                    android:id="@+id/radio_button_ma"
+                    style="@style/RBStyle"
+                    android:text="MA"
+                    android:button="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <RadioButton
+                    android:id="@+id/radio_button_boll"
+                    style="@style/RBStyle"
+                    android:text="BOLL"
+                    android:button="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <RadioButton
+                    android:id="@+id/radio_button_hide1"
+                    style="@style/RBStyle"
+                    android:text="隐藏"
+                    android:button="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+            </RadioGroup>
+
+            <View
+                android:background="@color/u_263741"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <TextView
+                android:text="副图"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/u_526d9a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <RadioGroup
+                android:id="@+id/radio_group2"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5">
+
+                <RadioButton
+                    android:id="@+id/radio_button_macd"
+                    style="@style/RBStyle"
+                    android:text="MACD"
+                    android:button="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <RadioButton
+                    android:id="@+id/radio_button_kdj"
+                    style="@style/RBStyle"
+                    android:text="KDJ"
+                    android:button="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <RadioButton
+                    android:id="@+id/radio_button_rsi"
+                    style="@style/RBStyle"
+                    android:text="RSI"
+                    android:button="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <RadioButton
+                    android:id="@+id/radio_button_wr"
+                    style="@style/RBStyle"
+                    android:text="WR"
+                    android:button="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <RadioButton
+                    android:id="@+id/radio_button_hide2"
+                    style="@style/RBStyle"
+                    android:text="隐藏"
+                    android:button="@null"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        app:tabMode="scrollable"
+        android:layout_marginTop="5dp"
+        android:background="@color/u_131e32"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"/>
+
+
+
+
+</LinearLayout>

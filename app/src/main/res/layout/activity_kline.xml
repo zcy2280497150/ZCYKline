@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/kline_activity_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:paddingTop="24dp"
+        android:background="@color/kline_bg_color"
+        android:layout_width="match_parent"
+        android:layout_height="70dp">
+
+        <LinearLayout
+            android:id="@+id/btn_back_layout"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_back"
+                android:layout_width="9dp"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/title_txt"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white"
+                android:text="@string/btc_usdt_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btn_enlarge"
+            android:gravity="center"
+            android:layout_alignParentEnd="true"
+            android:layout_width="46dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@drawable/icon_enlarge"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:background="@color/kline_bg_color"
+        android:layout_marginTop="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            app:tabMode="scrollable"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/btn_ft"
+            android:text="隐藏"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@color/kline_bg_line_color"
+            android:layout_width="50dp"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+
+    <zcy.app.zcykline.customview.ZCYKlineView
+        android:id="@+id/kline_view"
+        android:background="@color/kline_bg_color"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="360dp" />
+
+
+
+</LinearLayout>

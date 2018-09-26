@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+    
+    <!--<zcy.app.zcykline.customview.ZCYKlineView-->
+        <!--android:id="@+id/kline_view"-->
+        <!--android:background="@color/kline_bg_color"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="370dp" />-->
+
+    <Button
+        android:text="@string/btc_usdt_text"
+        android:id="@+id/btn_btc_usdt"
+        android:layout_margin="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
