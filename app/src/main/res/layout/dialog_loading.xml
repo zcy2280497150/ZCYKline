@@ -14,7 +14,7 @@
         android:layout_height="80dp">
         <zcy.app.zcykline.customview.CusLoadingView
             app:icon_width="30dp"
-            app:round_bg_width="@dimen/dp_2"
+            app:round_bg_width="@dimen/dp_1"
             app:round_bg_color="@color/u_e0e0e0"
             android:layout_width="60dp"
             android:layout_height="60dp" />
