@@ -17,6 +17,17 @@ import zcy.app.zcykline.utils.MyLog;
 
 public class ZCYKlineView extends View {
 
+
+    public static final int GRAPH_TYPE_NONE = 0;//隐藏主图指标线
+    public static final int GRAPH_TYPE_MA = 1;//显示主图指标线 MA
+    public static final int GRAPH_TYPE_BOLL = 2;//显示主图指标线 BOLL
+
+    public static final int SUB_GRAPH_TYPE_NONE = 0;//隐藏副图
+    public static final int SUB_GRAPH_TYPE_MACD = 1;//副图 macd
+    public static final int SUB_GRAPH_TYPE_KDJ = 2;//副图 kdj
+    public static final int SUB_GRAPH_TYPE_RSI = 3;//副图 rsi
+    public static final int SUB_GRAPH_TYPE_WR = 4;//副图 wr
+
     private int riseColor;//涨 color
     private int fallColor;//跌 color
     private int bgLineColor;

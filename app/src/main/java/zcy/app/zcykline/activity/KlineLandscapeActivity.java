@@ -91,13 +91,13 @@ public class KlineLandscapeActivity extends BaseActivity implements View.OnClick
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId){
                     case R.id.radio_button_macd:
-                        klineView.setSubGraphType(DrawUtils.SUB_GRAPH_TYPE_MACD);
+                        klineView.setSubGraphType( ZCYKlineView.SUB_GRAPH_TYPE_MACD);
                         break;
                     case R.id.radio_button_kdj:
-                        klineView.setSubGraphType(DrawUtils.SUB_GRAPH_TYPE_KDJ);
+                        klineView.setSubGraphType( ZCYKlineView.SUB_GRAPH_TYPE_KDJ);
                         break;
                     default:
-                        klineView.setSubGraphType(DrawUtils.SUB_GRAPH_TYPE_NONE);
+                        klineView.setSubGraphType( ZCYKlineView.SUB_GRAPH_TYPE_NONE);
                         break;
                 }
             }
@@ -113,10 +113,10 @@ public class KlineLandscapeActivity extends BaseActivity implements View.OnClick
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId){
                     case R.id.radio_button_ma:
-                        klineView.setGraphType(DrawUtils.GRAPH_TYPE_MA);
+                        klineView.setGraphType( ZCYKlineView.GRAPH_TYPE_MA);
                         break;
                     default:
-                        klineView.setGraphType(DrawUtils.GRAPH_TYPE_NONE);
+                        klineView.setGraphType( ZCYKlineView.GRAPH_TYPE_NONE);
                         break;
                 }
             }

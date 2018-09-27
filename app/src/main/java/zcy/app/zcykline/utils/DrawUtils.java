@@ -16,18 +16,10 @@ import java.util.Map;
 
 import zcy.app.zcykline.APP;
 import zcy.app.zcykline.bean.Kline;
+import zcy.app.zcykline.customview.ZCYKlineView;
 
 public class DrawUtils {
 
-    public static final int GRAPH_TYPE_NONE = 0;//隐藏主图指标线
-    public static final int GRAPH_TYPE_MA = 1;//显示主图指标线 MA
-    public static final int GRAPH_TYPE_BOLL = 2;//显示主图指标线 BOLL
-
-    public static final int SUB_GRAPH_TYPE_NONE = 0;//隐藏副图
-    public static final int SUB_GRAPH_TYPE_MACD = 1;//副图 macd
-    public static final int SUB_GRAPH_TYPE_KDJ = 2;//副图 kdj
-    public static final int SUB_GRAPH_TYPE_RSI = 3;//副图 rsi
-    public static final int SUB_GRAPH_TYPE_WR = 4;//副图 wr
 
     private static String MA5_COLOR = "#FFFFFF";//
     private static String VMA5_COLOR = "#E4E45E";//
@@ -74,10 +66,10 @@ public class DrawUtils {
     public static void draw(Canvas canvas , float width , float height ,int graphType , int subGraphType , List<Kline> klines , int start , int end , int skn , float eth , float ebh,int bgLineColor,int riseColor,int fallColor,boolean isShowCoordinate , float currX , boolean isFS){
         float hl = rectF1.width() / skn;//水平方向单个距离
         rectF1.set(0f,eth , width , height - ebh);
-        drawBg(canvas, rectF1,SUB_GRAPH_TYPE_NONE == subGraphType ? 5 : 6 ,4 ,bgLineColor);
+        drawBg(canvas, rectF1, ZCYKlineView.SUB_GRAPH_TYPE_NONE == subGraphType ? 5 : 6 ,4 ,bgLineColor);
         rectF1.set(0f,height - ebh , width , height);
         drawBottomTimes(canvas , rectF1, klines , start ,end , skn , 4);
-        float vl = (height - eth - ebh) / (SUB_GRAPH_TYPE_NONE == subGraphType ? 5 : 6);//垂直方向单份长度
+        float vl = (height - eth - ebh) / ( ZCYKlineView.SUB_GRAPH_TYPE_NONE == subGraphType ? 5 : 6);//垂直方向单份长度
         if (null != klines){
             //得到最大值和最小值的索引
             int maxIndex = start;
@@ -116,21 +108,21 @@ public class DrawUtils {
             rectF1.set(0f,eth + vl * 4f + DENSITY * 15f ,width , eth + vl * 5f);
             drawVolGraph(canvas , rectF1, klines , start ,end ,skn ,vKmax,riseColor , fallColor);
 
-            if (SUB_GRAPH_TYPE_MACD == subGraphType){
+            if ( ZCYKlineView.SUB_GRAPH_TYPE_MACD == subGraphType){
                 rectF1.set(0f,eth + vl * 5f, width ,eth + vl * 5f + DENSITY *15f);
                 drawSubGraphMACDTitle(canvas , rectF1, klines.get(index));
                 //副图MACD
                 rectF1.set(0f,eth + vl * 5f + DENSITY *15f , width , height - ebh);
                 drawSubGraphMACD(canvas , rectF1, klines , start , end , skn , riseColor , fallColor);
-            }if (SUB_GRAPH_TYPE_KDJ == subGraphType){
+            }if ( ZCYKlineView.SUB_GRAPH_TYPE_KDJ == subGraphType){
                 rectF1.set(0f,eth + vl * 5f, width ,eth + vl * 5f + DENSITY *15f);
                 drawSubGraphKDJTitle(canvas , rectF1, klines.get(index));
                 //副图KDJ
                 rectF1.set(0f,eth + vl * 5f + DENSITY *15f , width , height - ebh);
                 drawSubGraphKDJ(canvas , rectF1, klines , start , end ,skn , bgLineColor);
-            }if (SUB_GRAPH_TYPE_RSI == subGraphType){
+            }if ( ZCYKlineView.SUB_GRAPH_TYPE_RSI == subGraphType){
                 // TODO: 2018/9/6 RSI
-            }if (SUB_GRAPH_TYPE_WR == subGraphType){
+            }if ( ZCYKlineView.SUB_GRAPH_TYPE_WR == subGraphType){
                 // TODO: 2018/9/6 WR
             }
 
@@ -513,7 +505,7 @@ public class DrawUtils {
 
             if (isFS){
                 //如果是分时图,显示一条30日均线
-                if (GRAPH_TYPE_MA == graphType){
+                if ( ZCYKlineView.GRAPH_TYPE_MA == graphType){
                     //30日均线path初始化
                     if (i > 30 && start != i){
                         path3.lineTo((i-start + 0.5f)*hl , (float) (rectF.bottom - (kline.getMa30() - min)*vl));
@@ -542,7 +534,7 @@ public class DrawUtils {
             }else {
                 //非分时图，显示蜡烛图，需要正常显示MA三条指标线
                 //显示MA指标
-                if (GRAPH_TYPE_MA == graphType){
+                if ( ZCYKlineView.GRAPH_TYPE_MA == graphType){
                     //5日均线path数据填充
                     if (i > 5 && start != i){
                         path1.lineTo((i-start + 0.5f)*hl , (float) (rectF.bottom - (kline.getMa5() - min)*vl));
@@ -607,7 +599,7 @@ public class DrawUtils {
 
         }else {
             //绘制MA指标线
-            if (GRAPH_TYPE_MA == graphType){
+            if ( ZCYKlineView.GRAPH_TYPE_MA == graphType){
                 p.setColor(Color.parseColor(MA5_COLOR));
                 canvas.save();
                 canvas.clipRect(rectF);

@@ -36,7 +36,7 @@ public class KlineActivity extends BaseActivity implements View.OnClickListener{
 //        title = getIntent().getStringExtra("title");
         title = "BTC/USDT";//这里标题直接写死了
         klineView = findViewById(R.id.kline_view);
-        klineView.setGraphType(DrawUtils.GRAPH_TYPE_MA);
+        klineView.setGraphType(ZCYKlineView.GRAPH_TYPE_MA);
         ((TextView)findViewById(R.id.title_txt)).setText(title);
         findViewById(R.id.btn_back_layout).setOnClickListener(this);
         findViewById(R.id.btn_enlarge).setOnClickListener(this);
@@ -96,7 +96,7 @@ public class KlineActivity extends BaseActivity implements View.OnClickListener{
     }
 
     private String[] strs = {"隐藏","MACD","KDJ"};
-    private int[] types = {DrawUtils.SUB_GRAPH_TYPE_NONE , DrawUtils.SUB_GRAPH_TYPE_MACD , DrawUtils.SUB_GRAPH_TYPE_KDJ};
+    private int[] types = { ZCYKlineView.SUB_GRAPH_TYPE_NONE ,  ZCYKlineView.SUB_GRAPH_TYPE_MACD ,  ZCYKlineView.SUB_GRAPH_TYPE_KDJ};
     private int select;
 
     private void showAlertDialog() {
